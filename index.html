@@ -1,252 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/output.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-          rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-            href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
 
-
     <title>Landing with Carousel</title>
+  </head>
 
-</head>
-
-<body>
-
-
+  <body>
     <!-- Testimonial Section -->
     <div class="w-full h-full">
-        <div class="flex flex-col lg:flex-row items-stretch min-h-[500px]">
-          <!-- Image Section -->
-          <div class="w-full lg:w-1/2 relative h-full lg:h-auto">
-            <img
-              src="https://www.metrojourneys.com/wp-content/uploads/2020/02/galapagos-giant-tortoise-santa-cruz-galapagos-ecuador.jpg"
-              alt="Tortoise"
-              class="w-full h-full object-cover"
-            />
-            <div class="absolute bottom-10 left-5 text-white  p-4 rounded-lg">
-              <p class="font-bold text-2xl">Eduardo Silva</p>
-              <p class="text-lg text-gray-300">Destination Expert</p>
-            </div>
-          </div>
-    
-          <!-- Swiper Section -->
-          <div class="w-full lg:w-1/2 relative h-full lg:h-auto pl-8 mt-8">
-            <h2 class="text-4xl font-extrabold text-[#0d1e25] mt-4 mb-4 w-auto">
-              See what people are saying about us!
-            </h2>
-            <!-- Swiper -->
-            <div class="swiper h-72 w-full lg:h-64 pb-4">
-              <div class="swiper-wrapper" id="review-container"> 
-              </div>
-            </div>
-            <div class="flex gap-4 mt-4">
-                <button
-                class=" rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition" onclick="swiper.slidePrev()">
-                <i class="fa fa-arrow-left text-[#0d1e25]"></i>
-              </button>
-              <button
-                class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition" onclick="swiper.slideNext()">
-                <i class="fa fa-arrow-right text-[#0d1e25]"></i>
-              </button>
-            </div>
+      <div class="flex flex-col lg:flex-row items-stretch min-h-[500px]">
+        <!-- Image Section -->
+        <div class="w-full lg:w-1/2 relative h-full lg:h-auto">
+          <img
+            src="https://www.metrojourneys.com/wp-content/uploads/2020/02/galapagos-giant-tortoise-santa-cruz-galapagos-ecuador.jpg"
+            alt="Tortoise"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-10 left-5 text-white p-4 rounded-lg">
+            <p class="font-bold text-2xl">Eduardo Silva</p>
+            <p class="text-lg text-gray-300">Destination Expert</p>
           </div>
         </div>
-    </div>
-    
-    <div class="bg-gray-100 py-8 relative">
-        <!-- Header -->
-    <main class="md:h-[25rem] bg-[#0d1e25]">
-        <section class="flex flex-col md:flex-row items-center justify-between gap-x-4 pl-4 md:pl-16 h-full">
-            <!-- Left Content -->
-            <div class="text-center md:text-left md:w-1/2 text-white space-y-4 py-4">
-                <h3 class="text-[#41beb6] text-lg font-semibold">SAVE TODAY</h3>
-                <h1 class="text-4xl md:text-5xl font-bold">Exclusive Travel<br>Deals</h1>
-                <p class="text-base md:text-lg">
-                    Unleash your inner adventurer in the Galapagos and South America with our exclusive offers.
-                    Create lasting memories—start your journey today!
-                </p>
-            </div>
-        
-            <!-- Right Image -->
-            <div class="md:w-1/2 mt-8 md:mt-0 flex h-full">
-                <img src="https://www.metropolitan-touring.com/wp-content/uploads/2024/02/Galapagos-Islands-Penguin.webp" alt="Penguins on Rocks" class="w-full h-full object-cover shadow-lg">
-            </div>
-        </section>
-    </main>
 
-    <!-- Cards Section -->
-    <section class="bg-gray-100 py-12 px-4 md:px-16">
+        <!-- Swiper Section -->
+        <div class="w-full lg:w-1/2 relative h-full lg:h-auto pl-8 mt-8">
+          <h2 class="text-4xl font-extrabold text-[#0d1e25] mt-4 mb-4 w-auto">
+            See what people are saying about us!
+          </h2>
+          <!-- Swiper -->
+          <div class="swiper h-72 w-full lg:h-64 pb-4">
+            <div class="swiper-wrapper" id="review-container"></div>
+          </div>
+          <div class="flex gap-4 mt-4">
+            <button
+              class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition"
+              onclick="swiper.slidePrev()"
+            >
+              <i class="fa fa-arrow-left text-[#0d1e25]"></i>
+            </button>
+            <button
+              class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition"
+              onclick="swiper.slideNext()"
+            >
+              <i class="fa fa-arrow-right text-[#0d1e25]"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 py-8 relative">
+      <!-- Header -->
+      <main class="md:h-[25rem] bg-[#0d1e25]">
+        <section
+          class="flex flex-col md:flex-row items-center justify-between gap-x-6 md:pl-16 h-full"
+        >
+          <!-- Left Content -->
+          <div
+            class="text-center md:text-left md:w-1/2 text-white space-y-4 p-4 md:py-4 md:px-0"
+          >
+            <h3 class="text-[#41beb6] text-lg font-semibold">SAVE TODAY</h3>
+            <h1 class="text-4xl md:text-5xl font-bold">
+              Exclusive Travel<br />Deals
+            </h1>
+            <p class="text-base md:text-lg">
+              Unleash your inner adventurer in the Galapagos and South America
+              with our exclusive offers. Create lasting memories—start your
+              journey today!
+            </p>
+          </div>
+
+          <!-- Right Image -->
+          <div class="md:w-1/2 md:mt-0 flex h-full">
+            <img
+              src="https://www.metropolitan-touring.com/wp-content/uploads/2024/02/Galapagos-Islands-Penguin.webp"
+              alt="Penguins on Rocks"
+              class="w-full h-full object-cover shadow-lg"
+            />
+          </div>
+        </section>
+      </main>
+
+      <!-- Cards Section -->
+      <section class="bg-gray-100 py-12 px-4 md:px-16">
         <div class="max-w-7xl mx-auto">
-          <h2 class="text-2xl md:text-3xl font-bold text-[#0d1e25] mb-8 text-center">Promo Hotels</h2>
+          <h2
+            class="text-2xl md:text-3xl font-bold text-[#0d1e25] mb-8 text-center"
+          >
+            Promo Hotels
+          </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Card 1 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
+            >
               <div class="relative">
-                <img src="https://www.metropolitan-touring.com/wp-content/uploads/2023/05/mashpi-lodge-1.webp" alt="Mashpi Lodge" class="w-full h-48 object-cover">
-                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">-30% OFF</span>
+                <img
+                  src="https://www.metropolitan-touring.com/wp-content/uploads/2023/05/mashpi-lodge-1.webp"
+                  alt="Mashpi Lodge"
+                  class="w-full h-48 object-cover"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full"
+                  >-30% OFF</span
+                >
               </div>
               <div class="p-6 flex flex-col flex-grow">
-                <h3 class="text-lg font-bold text-[#0d1e25]">SPECIAL OFFERS MASHPI LODGE</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-grow">Up to 30% OFF on your stay + amenities</p>
-                <button class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]">
+                <h3 class="text-lg font-bold text-[#0d1e25]">
+                  SPECIAL OFFERS MASHPI LODGE
+                </h3>
+                <p class="text-sm text-gray-600 mt-2 flex-grow">
+                  Up to 30% OFF on your stay + amenities
+                </p>
+                <button
+                  class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]"
+                >
                   REQUEST
                 </button>
               </div>
             </div>
             <!-- Card 2 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
+            >
               <div class="relative">
-                <img src="https://www.metropolitan-touring.com/wp-content/uploads/2024/10/Finch-Bay-Hotel-Galapagos-Bar-Pool.webp" alt="Finch Bay Galapagos Hotel" class="w-full h-48 object-cover">
-                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">-30% OFF</span>
+                <img
+                  src="https://www.metropolitan-touring.com/wp-content/uploads/2024/10/Finch-Bay-Hotel-Galapagos-Bar-Pool.webp"
+                  alt="Finch Bay Galapagos Hotel"
+                  class="w-full h-48 object-cover"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full"
+                  >-30% OFF</span
+                >
               </div>
               <div class="p-6 flex flex-col flex-grow">
-                <h3 class="text-lg font-bold text-[#0d1e25]">SPECIAL OFFERS FINCH BAY GALAPAGOS HOTEL</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-grow">Up to 30% OFF on your stay + amenities</p>
-                <button class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]">
+                <h3 class="text-lg font-bold text-[#0d1e25]">
+                  SPECIAL OFFERS FINCH BAY GALAPAGOS HOTEL
+                </h3>
+                <p class="text-sm text-gray-600 mt-2 flex-grow">
+                  Up to 30% OFF on your stay + amenities
+                </p>
+                <button
+                  class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]"
+                >
                   REQUEST
                 </button>
               </div>
             </div>
             <!-- Card 3 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
+            >
               <div class="relative">
-                <img src="https://www.metropolitan-touring.com/wp-content/uploads/2024/05/Casa-Gangotena-Integration.webp" alt="Casa Gangotena Hotel" class="w-full h-48 object-cover">
-                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">-30% OFF</span>
+                <img
+                  src="https://www.metropolitan-touring.com/wp-content/uploads/2024/05/Casa-Gangotena-Integration.webp"
+                  alt="Casa Gangotena Hotel"
+                  class="w-full h-48 object-cover"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full"
+                  >-30% OFF</span
+                >
               </div>
               <div class="p-6 flex flex-col flex-grow">
-                <h3 class="text-lg font-bold text-[#0d1e25]">SPECIAL OFFERS CASA GANGOTENA HOTEL</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-grow">Up to 30% OFF on your stay + amenities</p>
-                <button class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]">
+                <h3 class="text-lg font-bold text-[#0d1e25]">
+                  SPECIAL OFFERS CASA GANGOTENA HOTEL
+                </h3>
+                <p class="text-sm text-gray-600 mt-2 flex-grow">
+                  Up to 30% OFF on your stay + amenities
+                </p>
+                <button
+                  class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]"
+                >
                   REQUEST
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </section>      
+      </section>
 
-    
-    <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold text-[#0d1e25] mb-4">Join us!</h2>
-            <p class="text-[#0d1e25] text-4xl mb-8 font-semibold">Subscribe to receive our deals in preview and the latest
-                news.</p>
-            <form class="flex flex-col md:flex-row items-center justify-center gap-4">
-                <label>
-                    <input type="text" placeholder="Name*"
-                        class="w-full md:w-auto px-4 py-2 border border-[#38beba4f] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-                </label>
-                <label>
-                    <input type="email" placeholder="Email*"
-                        class="w-full md:w-auto px-4 py-2 border border-[#38beba4f] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-                </label>
-            </form>
-            <div class="flex items-center justify-center mt-4 gap-2">
-                <input type="checkbox" id="privacyPolicy"
-                    class="w-4 h-4 text-[#0d1e25] border-gray-300 rounded focus:ring-blue-500"/>
-                <label for="privacyPolicy" class="text-[#38beba] text-sm">
-                    (*) I've read and accept Metrojourney's <a href="#" class="text-[#38beba] underline font-bold">privacy
-                    policies</a>
-                </label>
-            </div>
-            <button type="submit" class="bg-[#0d1e25] text-white px-6 py-2 mt-6 rounded-3xl uppercase">
-                Subscribe
-            </button>
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-extrabold text-[#0d1e25] mb-4">Join us!</h2>
+        <p class="text-[#0d1e25] text-4xl mb-8 font-semibold">
+          Subscribe to receive our deals in preview and the latest news.
+        </p>
+        <form
+          class="flex flex-col md:flex-row items-center justify-center gap-4"
+        >
+          <label>
+            <input
+              type="text"
+              placeholder="Name*"
+              class="w-full md:w-auto px-4 py-2 border border-[#38beba4f] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </label>
+          <label>
+            <input
+              type="email"
+              placeholder="Email*"
+              class="w-full md:w-auto px-4 py-2 border border-[#38beba4f] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </label>
+        </form>
+        <div class="flex items-center justify-center mt-4 gap-2">
+          <input
+            type="checkbox"
+            id="privacyPolicy"
+            class="w-4 h-4 text-[#0d1e25] border-gray-300 rounded focus:ring-blue-500"
+          />
+          <label for="privacyPolicy" class="text-[#38beba] text-sm">
+            (*) I've read and accept Metrojourney's
+            <a href="#" class="text-[#38beba] underline font-bold"
+              >privacy policies</a
+            >
+          </label>
         </div>
+        <button
+          type="submit"
+          class="bg-[#0d1e25] text-white px-6 py-2 mt-6 rounded-3xl uppercase"
+        >
+          Subscribe
+        </button>
+      </div>
     </div>
-</body>
+  </body>
 
-<!-- Swiper.js -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  // Mock data for reviews
-  const reviews = [
-    {
-      rating: "5",
-      content: "We haven't taken the trip yet, but planning the trip has been seamless and exciting!",
-      author: "Doug",
-      source: "Tripadvisor"
-    },
-    {
-      rating: "5",
-      content: "The team provided excellent service, and the experience was unforgettable!",
-      author: "Sarah",
-      source: "Google Reviews"
-    },
-    {
-      rating: "5",
-      content: "Great trip overall, but we faced minor delays during the journey.",
-      author: "Mike",
-      source: "Yelp"
-    },
-    {
-      rating: "4",
-      content: "We haven't taken the trip yet, but planning the trip has been seamless and exciting!",
-      author: "Doug",
-      source: "Tripadvisor"
-    },
-    {
-      rating: "3",
-      content: "The team provided excellent service, and the experience was unforgettable!",
-      author: "Sarah",
-      source: "Google Reviews"
-    },
-    {
-      rating: "4",
-      content: "Great trip overall, but we faced minor delays during the journey.",
-      author: "Mike",
-      source: "Yelp"
-    }
-  ];
+  <!-- Swiper.js -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Mock data for reviews
+    const reviews = [
+      {
+        rating: "5",
+        content:
+          "We haven't taken the trip yet, but planning the trip has been seamless and exciting!",
+        author: "Doug",
+        source: "Tripadvisor",
+      },
+      {
+        rating: "5",
+        content:
+          "The team provided excellent service, and the experience was unforgettable!",
+        author: "Sarah",
+        source: "Google Reviews",
+      },
+      {
+        rating: "5",
+        content:
+          "Great trip overall, but we faced minor delays during the journey.",
+        author: "Mike",
+        source: "Yelp",
+      },
+      {
+        rating: "4",
+        content:
+          "We haven't taken the trip yet, but planning the trip has been seamless and exciting!",
+        author: "Doug",
+        source: "Tripadvisor",
+      },
+      {
+        rating: "3",
+        content:
+          "The team provided excellent service, and the experience was unforgettable!",
+        author: "Sarah",
+        source: "Google Reviews",
+      },
+      {
+        rating: "4",
+        content:
+          "Great trip overall, but we faced minor delays during the journey.",
+        author: "Mike",
+        source: "Yelp",
+      },
+    ];
 
-  // Dynamically populate reviews
-  const reviewContainer = document.getElementById("review-container");
+    // Dynamically populate reviews
+    const reviewContainer = document.getElementById("review-container");
 
-  reviews.forEach((review) => {
-    const slide = document.createElement("div");
-    slide.className = "w-96 swiper-slide p-4 bg-white rounded-lg shadow-lg";
+    reviews.forEach((review) => {
+      const slide = document.createElement("div");
+      slide.className = "w-96 swiper-slide p-4 bg-white rounded-lg shadow-lg";
 
-    const stars = Array(5)
+      const stars = Array(5)
         .fill(0)
-        .map((_, index) =>
-        index < parseInt(review.rating) // Convert rating to number
-            ? '<i class="fa fa-star text-yellow-500"></i>' // Filled star
-            : '<i class="fa fa-star-o text-yellow-500"></i>' // Outlined star
+        .map(
+          (_, index) =>
+            index < parseInt(review.rating) // Convert rating to number
+              ? '<i class="fa fa-star text-yellow-500"></i>' // Filled star
+              : '<i class="fa fa-star-o text-yellow-500"></i>' // Outlined star
         )
-        .join('');
+        .join("");
 
-    slide.innerHTML = `
+      slide.innerHTML = `
         <p class="flex mb-2">${stars}</p>
         <p>${review.content}</p>
         <p class="mt-2 text-sm text-gray-500">
         Review by ${review.author}, taken from ${review.source}
         </p>
     `;
-    reviewContainer.appendChild(slide);
+      reviewContainer.appendChild(slide);
     });
 
-  // Initialize Swiper
-  const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
+    // Initialize Swiper
+    const swiper = new Swiper(".swiper", {
+      slidesPerView: 1,
       centeredSlides: false,
       spaceBetween: 30,
       grabCursor: true,
       breakpoints: {
-        1024: { // For screens >= 1024px
-        slidesPerView: 3, // Show 3 slides
+        1024: {
+          // For screens >= 1024px
+          slidesPerView: 3, // Show 3 slides
         },
-        640: { // For screens >= 640px
-        slidesPerView: 2, // Show 2 slides
-        }
-    }
-  });
-</script>
+        640: {
+          // For screens >= 640px
+          slidesPerView: 2, // Show 2 slides
+        },
+      },
+    });
+  </script>
 </html>
