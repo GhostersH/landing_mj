@@ -55,6 +55,66 @@
         </section>
     </main>
 
+        <!-- Promo Section -->
+        <section class="bg-white bg-cover md:bg-cover bg-[url('https://www.metropolitan-touring.com/wp-content/uploads/2024/11/mj-lines-2.svg')] py-12">
+          <div class="w-full">
+              <h2 class="text-2xl md:text-4xl font-black text-[#0d1e25] mb-8 text-center">
+                Promo Cruises
+              </h2>
+              <div class="flex flex-col md:flex-row">
+                <div class="w-full lg:w-1/2 relative h-full lg:h-auto lg:pl-56 justify-center">
+                  <div class="bg-[#0d1e25] text-white rounded-lg w-full lg:w-[300px] ">
+                    <h2 class="text-xl font-bold uppercase text-center mb-2">Black Friday Sale</h2>
+                  </div>
+                  
+                  <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px] w-full lg:w-[300px]">
+                      <div class="relative">
+                          <img
+                                src="https://www.metropolitan-touring.com/wp-content/uploads/2024/10/Finch-Bay-Hotel-Galapagos-Bar-Pool.webp"
+                                alt="Finch Bay Galapagos Hotel"
+                                class="w-full h-52 object-cover"/>
+                          <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">-30% OFF</span>
+                      </div>
+                      <div class="p-6 flex flex-col flex-grow">
+                          <h3 class="text-lg font-bold text-[#0d1e25]">
+                              SPECIAL OFFERS FINCH BAY GALAPAGOS HOTEL
+                          </h3>
+                          <p class="text-sm text-gray-600 mt-2 flex-grow">
+                              Up to 30% OFF on your stay + amenities
+                          </p>
+                          <button
+                                  class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]"
+                          >
+                              REQUEST
+                          </button>
+                      </div>
+                  </div>
+                </div>
+                <div class="w-full lg:w-full relative h-full lg:h-auto overflow-hidden mt-8">
+                  <!-- Swiper -->
+                  <div class="swiper-promo min-h-[50vh] w-full lg:h-64 pb-4">
+                      <div class="swiper-wrapper" id="promo-container"></div>
+                  </div>
+                  
+                  <div class="flex gap-4 mt-4">
+                      <button
+                              class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition"
+                              onclick="swiperPromo.slidePrev()"
+                      >
+                          <i class="fa fa-arrow-left text-[#0d1e25]"></i>
+                      </button>
+                      <button
+                              class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition"
+                              onclick="swiperPromo.slideNext()"
+                      >
+                          <i class="fa fa-arrow-right text-[#0d1e25]"></i>
+                      </button>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </section>
+
     <!-- Cards Section -->
     <section class="bg-gray-100 py-12 px-4 md:px-16">
         <div class="max-w-5xl mx-auto">
@@ -255,6 +315,38 @@
 <!-- Swiper.js -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
+    const promos = [
+        {
+            discount: "30",
+            title: "Special Offers Mashpi Lodge",
+            description: "Up to 30% OFF on your stay + amenities",
+        },
+        {
+            discount: "30",
+            title: "Special Offers Mashpi Lodge",
+            description: "Up to 30% OFF on your stay + amenities",
+        },
+        {
+            discount: "30",
+            title: "Special Offers Mashpi Lodge",
+            description: "Up to 30% OFF on your stay + amenities",
+        },
+        {
+            discount: "30",
+            title: "Special Offers Mashpi Lodge",
+            description: "Up to 30% OFF on your stay + amenities",
+        },
+        {
+            discount: "30",
+            title: "Special Offers Mashpi Lodge",
+            description: "Up to 30% OFF on your stay + amenities",
+        },
+        {
+            discount: "30",
+            title: "Special Offers Mashpi Lodge",
+            description: "Up to 30% OFF on your stay + amenities",
+        },
+    ];
     // Mock data for reviews
     const reviews = [
         {
@@ -330,6 +422,58 @@
 
     // Initialize Swiper
     const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        breakpoints: {
+            1024: {
+                // For screens >= 1024px
+                slidesPerView: 3, // Show 3 slides
+            },
+            640: {
+                // For screens >= 640px
+                slidesPerView: 2, // Show 2 slides
+            },
+        },
+    });
+
+    const promoContainer = document.getElementById("promo-container");
+
+    // ... existing code ...
+    promos.forEach((promo) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide"; // Changed class name
+
+        slide.innerHTML = `
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px] mx-2"> <!-- Added h-full and mx-2 -->
+                <div class="relative h-52">
+                    <img
+                        src="https://www.metropolitan-touring.com/wp-content/uploads/2023/05/mashpi-lodge-1.webp"
+                        alt="Mashpi Lodge"
+                        class="w-full h-full object-cover"
+                    />
+                    <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        -${promo.discount}% OFF
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-lg font-bold text-[#0d1e25]">
+                        ${promo.title}
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-2 flex-grow">
+                        ${promo.description}
+                    </p>
+                    <button class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]">
+                        REQUEST
+                    </button>
+                </div>
+            </div>
+        `;
+        promoContainer.appendChild(slide);
+    });
+
+    const swiperPromo = new Swiper(".swiper-promo", {
         slidesPerView: 1,
         centeredSlides: false,
         spaceBetween: 30,
