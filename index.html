@@ -102,7 +102,7 @@
           </h2>
           <div class="flex flex-col md:flex-row">
             <div
-              class="w-full md:w-1/2 lg:w-1/2 relative h-full lg:h-auto lg:pl-56 justify-center"
+              class="w-full md:w-1/2 lg:w-1/2 relative h-full lg:h-auto xl:pl-56 lg:pl-28 justify-center"
             >
               <div
                 class="bg-[#0d1e25] text-white rounded-lg w-full lg:w-[300px]"
@@ -150,18 +150,18 @@
               </div>
 
               <div class="flex gap-4 mt-14">
-                <button
-                  class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition"
+                <div
+                  class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition cursor-pointer"
                   onclick="swiperPromo.slidePrev()"
                 >
                   <i class="fa fa-arrow-left text-[#0d1e25]"></i>
-                </button>
-                <button
-                  class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition"
+                </div>
+                <div
+                  class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition cursor-pointer"
                   onclick="swiperPromo.slideNext()"
                 >
                   <i class="fa fa-arrow-right text-[#0d1e25]"></i>
-                </button>
+                </div>
               </div>
             </div>
           </div>
@@ -584,11 +584,11 @@
       breakpoints: {
         1250: {
           // For screens >= 1024px
-          slidesPerView: 2.5, // Show 2.5 slides
+          slidesPerView: 3, // Show 2.5 slides
         },
         640: {
           // For screens >= 640px
-          slidesPerView: 1.5, // Show 2 slides
+          slidesPerView: 2, // Show 2 slides
         },
       },
     });
