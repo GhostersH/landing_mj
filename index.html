@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Landing with Carousel</title>
@@ -94,7 +95,7 @@
       <section
         class="bg-white bg-cover md:bg-cover bg-[url('https://www.metropolitan-touring.com/wp-content/uploads/2024/11/mj-lines-2.svg')] py-12"
       >
-        <div class="w-full">
+        <div class="w-full px-4 lg:px-0">
           <h2
             class="text-2xl md:text-4xl font-black text-[#0d1e25] mb-8 text-center"
           >
@@ -119,20 +120,21 @@
                   <img
                     src="https://www.metropolitan-touring.com/wp-content/uploads/2024/10/Finch-Bay-Hotel-Galapagos-Bar-Pool.webp"
                     alt="Finch Bay Galapagos Hotel"
-                    class="w-full h-52 object-cover"
+                    class="w-full h-44 object-cover"
                   />
                   <span
                     class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full"
-                    >-30% OFF</span
+                    >-20% OFF</span
                   >
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
-                  <h3 class="text-lg font-bold text-[#0d1e25]">
-                    SPECIAL OFFERS FINCH BAY GALAPAGOS HOTEL
+                  <h3 class="text-lg font-bold text-[#0d1e25] uppercase">
+                    Early Bird Lower Prices & Extra Goodies
                   </h3>
-                  <p class="text-sm text-gray-600 mt-2 flex-grow">
-                    Up to 30% OFF on your stay + amenities
-                  </p>
+                  <ul class="text-sm text-gray-600 mt-2 flex-grow list-disc pl-4">
+                    <li>Galapagos Cruises</li>
+                    <li>Get up to 20% OFF + amenities</li>
+                  </ul>
                   <button
                     class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]"
                   >
@@ -339,7 +341,7 @@
 
         <!-- Swiper Section -->
         <div
-          class="w-full lg:w-1/2 relative h-full lg:h-auto pl-8 mt-8 content-center"
+          class="w-full lg:w-1/2 relative h-full lg:h-auto pl-8 mt-8 content-center px-4 lg:px-0"
         >
           <h2 class="text-4xl font-black text-[#0d1e25] mt-4 mb-4 w-auto">
             See what people are saying about us!
@@ -412,6 +414,40 @@
         Subscribe
       </button>
     </div>
+    <footer class="bg-[#0d1e25] text-white py-4 px-4">
+      <div class="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:justify-between md:items-start gap-6 md:gap-4">
+        <!-- Logos Section -->
+        <div class="flex items-center gap-5">
+          <img 
+            src="https://www.metrojourneys.com/wp-content/uploads/2024/02/mj-logo.svg" 
+            alt="Casa Gangotena" 
+            class="h-10"
+          >
+        </div>
+    
+        <!-- Contact Information -->
+        <div class="text-center">
+          <div class="mb-1 text-[#38beba]">
+            <span class="text-[#38beba]"></span>
+              <i class="fa fa-phone"></i>
+              <i class="fi fi-us ml-2"></i>
+              800-058-4866
+            </span>
+          </div>
+          <div class="text-sm">
+            <span>LUN a VIE: 8:00 a 20:00</span>
+            <span class="mx-3">|</span>
+            <span>SAB-DOM: 10:00 a 19:00</span>
+          </div>
+        </div>
+    
+        <!-- Location and Copyright -->
+        <div class="text-right">
+          <div class="mb-1">Quito, Ecuador / Moneda: Dólar estadounidense</div>
+          <div>© 2024 Todos los derechos reservados.</div>
+        </div>
+      </div>
+    </footer>
   </body>
 
   <!-- Swiper.js -->
@@ -419,35 +455,24 @@
   <script>
     const promos = [
       {
-        discount: "30",
-        title: "Special Offers Mashpi Lodge",
-        description: "Up to 30% OFF on your stay + amenities",
+        img:"https://www.metrojourneys.com/wp-content/uploads/2024/11/galapagos-islands-exploration.webp",
+        discount: "-15% OFF",
+        title: "Limited Time Offer Seasonal Sales",
+        description: ["Galapagos Cruises", "Get Up to USD $870 OFF + Kids get 15% OFF"],
       },
       {
-        discount: "30",
-        title: "Special Offers Mashpi Lodge",
-        description: "Up to 30% OFF on your stay + amenities",
+        img:"https://www.metrojourneys.com/wp-content/uploads/2024/11/blue-footed-booby-galapagos-islands.webp",
+        discount: "FREE FLIGHT",
+        title: "Fly for Free Take your flight now!",
+        description: ["Galapagos Cruises", "Free roundtrip flight domestic flights"],
       },
       {
-        discount: "30",
+        img: "https://www.metrojourneys.com/wp-content/uploads/2024/11/family-sea-lion-galapagos-islands.webp",
+        discount: "FREE 4th PERSON",
         title: "Special Offers Mashpi Lodge",
-        description: "Up to 30% OFF on your stay + amenities",
+        description: ["Galapagos Cruises", "4th person in the booking is for free"],
       },
-      {
-        discount: "30",
-        title: "Special Offers Mashpi Lodge",
-        description: "Up to 30% OFF on your stay + amenities",
-      },
-      {
-        discount: "30",
-        title: "Special Offers Mashpi Lodge",
-        description: "Up to 30% OFF on your stay + amenities",
-      },
-      {
-        discount: "30",
-        title: "Special Offers Mashpi Lodge",
-        description: "Up to 30% OFF on your stay + amenities",
-      },
+      
     ];
     // Mock data for reviews
     const reviews = [
@@ -545,34 +570,38 @@
 
     // ... existing code ...
     promos.forEach((promo) => {
-      const slide = document.createElement("div");
-      slide.className = "swiper-slide"; // Changed class name
+  const slide = document.createElement("div");
+  slide.className = "swiper-slide";
 
-      slide.innerHTML = `
-            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px] mx-2"> <!-- Added h-full and mx-2 -->
-                <div class="relative h-52">
-                    <img
-                        src="https://www.metropolitan-touring.com/wp-content/uploads/2023/05/mashpi-lodge-1.webp"
-                        alt="Mashpi Lodge"
-                        class="w-full h-full object-cover"
-                    />
-                    <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        -${promo.discount}% OFF
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-lg font-bold text-[#0d1e25]">
+  slide.innerHTML = `
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px] mx-2">
+            <div class="relative h-44"> <!-- Reduced height of image container -->
+                <img
+                    src="${promo.img}"
+                    alt="${promo.title}"
+                    class="w-full h-full object-cover"
+                />
+                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    ${promo.discount}
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-1"> <!-- Changed to flex-1 -->
+                <div class="flex flex-col h-full"> <!-- Added flex container -->
+                    <h3 class="text-lg font-bold text-[#0d1e25] uppercase mb-3">
                         ${promo.title}
                     </h3>
-                    <p class="text-sm text-gray-600 mt-2 flex-grow">
-                        ${promo.description}
-                    </p>
-                    <button class="mt-4 bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026]">
+                    <div class="flex-1 overflow-y-auto"> <!-- Added scrollable container -->
+                        <ul class="text-sm text-gray-600 list-disc pl-4">
+                            ${promo.description.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <button class="bg-[#0d1e25] text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#092026] mt-4 w-full">
                         REQUEST
                     </button>
                 </div>
             </div>
-        `;
+        </div>
+      `;
       promoContainer.appendChild(slide);
     });
 
@@ -584,11 +613,11 @@
       breakpoints: {
         1250: {
           // For screens >= 1024px
-          slidesPerView: 3, // Show 2.5 slides
+          slidesPerView: 2.5, // Show 2.5 slides
         },
         640: {
           // For screens >= 640px
-          slidesPerView: 2, // Show 2 slides
+          slidesPerView: 1.5, // Show 2 slides
         },
       },
     });
