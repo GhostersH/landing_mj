@@ -102,7 +102,7 @@
           </h2>
           <div class="flex flex-col md:flex-row">
             <div
-              class="w-full lg:w-1/2 relative h-full lg:h-auto lg:pl-56 justify-center"
+              class="w-full md:w-1/2 lg:w-1/2 relative h-full lg:h-auto lg:pl-56 justify-center"
             >
               <div
                 class="bg-[#0d1e25] text-white rounded-lg w-full lg:w-[300px]"
@@ -149,7 +149,7 @@
                 <div class="swiper-wrapper" id="promo-container"></div>
               </div>
 
-              <div class="flex gap-4 mt-4">
+              <div class="flex gap-4 mt-14">
                 <button
                   class="rounded-full border-2 border-[#0d1e25] px-4 py-2 hover:bg-gray-300 transition"
                   onclick="swiperPromo.slidePrev()"
@@ -532,7 +532,7 @@
       breakpoints: {
         1024: {
           // For screens >= 1024px
-          slidesPerView: 3, // Show 3 slides
+          slidesPerView: 2.5, // Show 3 slides
         },
         640: {
           // For screens >= 640px
@@ -582,13 +582,13 @@
       spaceBetween: 30,
       grabCursor: true,
       breakpoints: {
-        1024: {
+        1250: {
           // For screens >= 1024px
-          slidesPerView: 3, // Show 3 slides
+          slidesPerView: 2.5, // Show 2.5 slides
         },
         640: {
           // For screens >= 640px
-          slidesPerView: 2, // Show 2 slides
+          slidesPerView: 1.5, // Show 2 slides
         },
       },
     });
