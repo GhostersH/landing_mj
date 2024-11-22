@@ -554,40 +554,6 @@ video {
   display: none;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .absolute {
   position: absolute;
 }
@@ -638,6 +604,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -682,20 +652,16 @@ video {
   height: 100%;
 }
 
-.min-h-\[50vh\] {
-  min-height: 50vh;
+.min-h-\[40vh\] {
+  min-height: 40vh;
 }
 
 .min-h-\[60vh\] {
   min-height: 60vh;
 }
 
-.min-h-\[43vh\] {
-  min-height: 43vh;
-}
-
-.min-h-\[44vh\] {
-  min-height: 44vh;
+.\!w-full {
+  width: 100% !important;
 }
 
 .w-11\/12 {
@@ -718,10 +684,6 @@ video {
   width: 100%;
 }
 
-.\!w-full {
-  width: 100% !important;
-}
-
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -740,10 +702,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-col-reverse {
-  flex-direction: column-reverse;
 }
 
 .content-center {
@@ -766,10 +724,6 @@ video {
   justify-content: space-between;
 }
 
-.justify-items-center {
-  justify-items: center;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -780,10 +734,6 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-8 {
-  gap: 2rem;
 }
 
 .gap-x-6 {
@@ -949,21 +899,12 @@ video {
   padding-bottom: 6rem;
 }
 
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .pb-4 {
   padding-bottom: 1rem;
 }
 
 .pl-8 {
   padding-left: 2rem;
-}
-
-.pl-3 {
-  padding-left: 0.75rem;
 }
 
 .text-center {
@@ -1126,10 +1067,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:mt-0 {
-    margin-top: 0px;
-  }
-
   .md\:h-\[33rem\] {
     height: 33rem;
   }
@@ -1148,10 +1085,6 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:flex-row-reverse {
-    flex-direction: row-reverse;
   }
 
   .md\:items-center {
@@ -1179,10 +1112,6 @@ video {
 
   .md\:pl-16 {
     padding-left: 4rem;
-  }
-
-  .md\:pl-56 {
-    padding-left: 14rem;
   }
 
   .md\:text-left {
@@ -1234,19 +1163,17 @@ video {
     flex-direction: row;
   }
 
-  .lg\:items-start {
-    align-items: flex-start;
-  }
-
-  .lg\:justify-start {
-    justify-content: flex-start;
-  }
-
   .lg\:bg-center {
     background-position: center;
   }
 
-  .lg\:pl-56 {
+  .lg\:pl-28 {
+    padding-left: 7rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:pl-56 {
     padding-left: 14rem;
   }
 }
